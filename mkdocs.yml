@@ -1,0 +1,34 @@
+site_name: MkDocs
+nav:
+   - Home: index.md
+   - Extrututa: pagina2.md
+   - About: outros/about.md
+theme:
+    name: material  # ou mkdocs
+    palette:
+      - scheme: default
+        primary: indigo
+        toggle:
+          icon: material/weather-night
+          name: Modo noturno
+      - scheme: slate
+        primary: deep purple
+        toggle:
+          icon: material/weather-sunny
+          name: Modo Claro
+
+markdown_extensions:
+ - pymdownx.tasklist  #Suporte a lista de tarefas
+ - pymdownx.emoji     #Suporte a Emojis
+ - pymdownx.mark      #Suporte a Tachado
+ - pymdownx.tilde     #Suporte a Realçado
+ - pymdownx.highlight #Suporte a Código
+ - pymdownx.superfences:
+    custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_div_format
+extra_css:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
